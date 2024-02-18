@@ -1,0 +1,281 @@
+/* Start Variables */
+:root{
+  --mainColor: #f6f6f6;
+  --primaryColor: #03a9f4;
+  --redColor: #b33939;
+  --blueColor: #227093;
+  --greenColor:#218c74;
+  --mainPadding: 20px;
+  --secondPadding: 10px;
+}
+/* End Variables */
+/* Star Global Rules */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  font-family:"open sans";
+  margin: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* End Global Rules */
+/* Start Components */
+.center-H-elements{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.center-V-elements{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* End Components */
+/* Start Header */
+header{
+  padding: 0 var(--mainPadding);
+  position: sticky;
+  top: 0;
+  background-color: white;
+  margin: 0;
+}
+header .container{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo{
+  font-weight: bold;
+  font-size: 24px;
+  padding: var(--secondPadding);
+  width: fit-content;
+}
+header nav{
+  position: relative;
+  width: 90%;
+  padding: var(--secondPadding);
+}
+header nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  font-size: 14px;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav ul li a{
+  text-decoration: none;
+  color: #444;
+}
+/* End Header */
+/* Start Services */
+.services{
+  padding: 0;
+  margin: 0;
+}
+/* Section One */
+.services> section:first-child{
+  text-align: center;
+  background-color:var(--mainColor);
+  padding: var(--mainPadding) var(--secondPadding);
+}
+.services> section:first-child> article> h3{
+  font-size: 30px;
+  margin: var(--mainPadding);
+  padding: var(--mainPadding);
+}
+.services> section:first-child> article> h3> span{
+  color: var(--primaryColor);
+}
+.services> section:first-child> article> p{
+  padding: var(--mainPadding) 20px;
+}
+/* Section Two */
+.services> section:last-child{
+  padding: var(--mainPadding) var(--secondPadding);
+  display: flex;
+  justify-content: space-evenly;
+}
+.services> section:last-child> article{
+  width: 25%;
+  padding: var(--mainPadding) var(--secondPadding);
+  justify-content: space-around;
+}
+.services>section:last-child>article> h3{
+  font-size: 15px;
+  margin: 2px;
+  text-align: center;
+}
+/* Small */
+@media (min-width: 768px) {
+  .services>section:last-child>article> h3 {
+    font-size: 20px;
+  }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+  .services>section:last-child>article> h3 {
+    font-size: 20px;
+  }
+}
+.services>section:last-child>article> p{
+  font-size: 15px;
+  text-align: center;
+  color: #777;
+}
+.services>section:last-child>article> img{
+  width: 90px;
+  height: 90px;
+}
+/* End Services */
+/* Start About */
+.about{
+  padding: var(--mainPadding) 0;
+}
+.about>section:first-child {
+  background-color: var(--mainColor);
+  padding: var(--mainPadding) var(--secondPadding);
+}
+.about>section:first-child>article{
+  width: 60%;
+}
+.about>section:first-child h3{
+  font-size: 30px;
+}
+.about>section:first-child>article p{
+  font-size: 15px;
+  color: #444;
+}
+.about>section:first-child>figure{
+  margin: 0;
+  width: 35%;
+}
+.about>section:first-child>figure img{
+  width: 100%;
+}
+/* Section Two */
+.about section:last-child{
+  padding: 50px 0;
+}
+.about section:last-child .container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.about section:last-child article{
+  position: relative;
+  width: 30%;
+  height: 100px;
+  padding: var(--secondPadding) 0;
+  color: white;
+  font-size: 15px;
+}
+.about section:last-child article span:first-child{
+  font-size: 40px;
+}
+.about section:last-child article:first-child{
+  background-color: var(--redColor);
+}
+.about section:last-child article:nth-child(2){
+  background-color: var(--blueColor);
+}
+.about section:last-child article:last-child{
+  background-color: var(--greenColor);
+}
+/* End About */
+/* Start Skills */
+.skills{
+  background-color: var(--mainColor);
+  padding: var(--mainPadding) 0;
+}
+.skills article{
+  width: 80%;
+  position: relative;
+}
+.skills h3{
+  text-align: center;
+}
+.skills ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+}
+.skills ul li{
+  padding: var(--secondPadding);
+  margin: 0px;
+}
+.skills ul li .skill{
+  width: 20%;
+  height: 25px;
+  margin: 0 10px;
+  text-align: end;
+}
+.skills ul li .progress-bar{
+  width: 80%;
+  height: 25px;
+  margin: 0 10px;
+  background-color: white;
+}
+.skills ul li .progress{
+  display: block;
+  height: 100%;
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 0 10px;
+  text-align: end;
+}
+/* End Skills */
+/* Start Footer */
+footer{
+  background-color: #444;
+  padding: var(--mainPadding) 0;
+  color: white;
+}
+footer .container{
+  justify-content: space-between;
+}
+footer p a{
+  text-decoration: none;
+  color: var(--primaryColor);
+
+}
+/* End Footer */
